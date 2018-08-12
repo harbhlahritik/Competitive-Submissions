@@ -2,7 +2,8 @@ import java.util.*;
 
 class longestSubstring {
 
-    public static int maxSubArray(ArrayList<Integer> A) {
+    public static int maxSubArray(final List<Integer> A) {
+        //Kadane's algorithm
         int max_so_far = A.get(0);
         int max_ending_here = A.get(0);
         for(int i = 1;i < A.size();i++){
@@ -19,7 +20,7 @@ class longestSubstring {
     }
 
     public static void main(String [] args){
-        ArrayList<Integer> arr = new ArrayList<Integer>();
+        List<Integer> arr = new ArrayList<Integer>();
         arr.add(-2);
         arr.add(1);
         arr.add(-3);
@@ -31,7 +32,7 @@ class longestSubstring {
         arr.add(4);
         System.out.println(arr);
 
-        System.out.println(maxSumArray(arr));
+        System.out.println(maxSubArray(arr));
     }
 
 }
